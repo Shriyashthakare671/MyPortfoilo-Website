@@ -6,6 +6,10 @@
     font-weight: normal;
     font-style: normal;
 }
+html {
+    scroll-behavior: smooth;
+}
+
 
 body {
     background: #101010;
@@ -991,6 +995,8 @@ a p {
     transform-style: preserve-3d;
     opacity: 0.3;
     transform: scale(0.9);
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
 }
 
 .container-projects .card.active {

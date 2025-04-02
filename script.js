@@ -159,6 +159,96 @@ function toggleNavMenu() {
 
 window.addEventListener("scroll", updateActiveSection);
 
+// Header and Footer Light 
+
+let lastScrollY = window.scrollY;
+const blushTop = document.querySelector('.blush-top');
+const blushBottom = document.querySelector('.blush-bottom');
+
+function handleScrollEffect() {
+    let scrollDirection = window.scrollY > lastScrollY ? 'down' : 'up';
+
+    if (scrollDirection === 'down') {
+        blushBottom.classList.add('show-light');
+        blushTop.classList.remove('show-light');
+    } else {
+        blushTop.classList.add('show-light');
+        blushBottom.classList.remove('show-light');
+    }
+
+    setTimeout(() => {
+        blushTop.classList.remove('show-light');
+        blushBottom.classList.remove('show-light');
+    }, 500); // Light disappears after 0.5s
+
+    lastScrollY = window.scrollY;
+}
+
+window.addEventListener('scroll', handleScrollEffect);
+
+//  glow for header and footer
+
+window.addEventListener("scroll", function () {
+  let header = document.querySelector("#header");
+  let footer = document.querySelector("footer");
+
+  if (window.scrollY > 50) {
+      header.classList.add("glow");
+      footer.classList.add("glow");
+  } else {
+      header.classList.remove("glow");
+      footer.classList.remove("glow");
+  }
+});
 
 
+// for scrolling smmothly 
+let ticking = false;
+
+function smoothScrollEffect() {
+    if (!ticking) {
+        requestAnimationFrame(() => {
+            // Add your animations or effects here
+            ticking = false;
+        });
+        ticking = true;
+    }
+}
+
+// for laz-loading image
+window.addEventListener("scroll", smoothScrollEffect);
+
+document.addEventListener("DOMContentLoaded", function() {
+  let lazyImages = document.querySelectorAll("img.lazyload");
+
+  const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              const img = entry.target;
+              img.src = img.getAttribute("data-src");
+              img.classList.remove("lazyload");
+              observer.unobserve(img);
+          }
+      });
+  });
+
+  lazyImages.forEach(img => observer.observe(img));
+});
+
+//  for lazy-loading video
+document.addEventListener("DOMContentLoaded", function () {
+  let videos = document.querySelectorAll("video.lazy-video");
+
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.play();
+          } else {
+              entry.target.pause();
+          }
+      });
+  });
+
+  videos.forEach(video => observer.observe(video));
+});
 

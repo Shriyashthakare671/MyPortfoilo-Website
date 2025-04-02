@@ -10,6 +10,8 @@
 </head>
 
 <body>
+    <div class="blush-light blush-top"></div>
+    <div class="blush-light blush-bottom"></div>
     <section id="header">
         <div class="container">
             <!-- Particle container -->
@@ -122,8 +124,8 @@
                     <!-- Particle container -->
                     <div id="particles-js"></div>
                     <!-- <img src="Photos/shri4.jpg" alt="Your Photo"> -->
-                    <video class="responsive-video" autoplay loop muted playsinline>
-                        <source src="Photos/shri10.mp4" type="video/mp4">
+                    <video class="responsive-video lazy-video" autoplay loop muted playsinline>
+                        <source src="Photos/shriyash.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -384,6 +386,44 @@
                 color: #e03a71;
             }
         }
+
+
+        /* Blush light effect */
+        .blush-light {
+            position: fixed;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: radial-gradient(circle, rgba(197, 191, 191, 0.5), transparent);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease-in-out;
+            z-index: 999;
+        }
+
+        /* Position at top and bottom */
+        .blush-top {
+            top: 0;
+        }
+
+        .blush-bottom {
+            bottom: 0;
+        }
+
+        /* Animation when scrolling */
+        .show-light {
+            opacity: 1;
+        }
+
+        #header,
+        footer {
+            transition: box-shadow 0.5s ease-in-out;
+        }
+
+        .glow {
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+        }
+
 
 
         /* Icon Styling */
@@ -1345,6 +1385,27 @@
             document.getElementById(tabName).classList.add("active-tab");
         }
     </script>
+
+
+
+
+    <!-- for scrolling smoothly -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.to("body", {
+            scrollTrigger: {
+                trigger: "body",
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 1, // Smooth scrolling effect
+            }
+        });
+    </script>
+
 
 
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
