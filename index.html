@@ -12,6 +12,49 @@
 <body>
     <div class="blush-light blush-top"></div>
     <div class="blush-light blush-bottom"></div>
+    <audio id="background-music" loop>
+        <source src="Photos/music1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Music Button -->
+    <button id="music-btn" onclick="toggleMusic()">🎵 Play Music</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let audio = document.getElementById("background-music");
+            let musicBtn = document.getElementById("music-btn");
+            audio.volume = 0.4; // Set volume to low
+
+            function toggleMusic() {
+                if (audio.paused) {
+                    audio.play().catch(error => console.log("Autoplay blocked:", error));
+                    musicBtn.textContent = "🔇 Pause Music";
+                } else {
+                    audio.pause();
+                    musicBtn.textContent = "🎵 Play Music";
+                }
+            }
+
+            // Allow music to start on first click anywhere
+            function playAudio() {
+                audio.play().catch(error => console.log("Autoplay blocked:", error));
+                document.removeEventListener("click", playAudio);
+                document.removeEventListener("scroll", playAudio);
+            }
+
+            document.addEventListener("click", playAudio);
+            document.addEventListener("scroll", playAudio);
+
+            // Attach function to button
+            window.toggleMusic = toggleMusic;
+        });
+    </script>
+
+
+
+
+
     <section id="header">
         <div class="container">
             <!-- Particle container -->
@@ -123,11 +166,11 @@
                 <div class="about-col-1">
                     <!-- Particle container -->
                     <div id="particles-js"></div>
-                    <!-- <img src="Photos/shri4.jpg" alt="Your Photo"> -->
-                    <video class="responsive-video lazy-video" autoplay loop muted playsinline>
+                    <img src="Photos/shri4.jpg" alt="Your Photo">
+                    <!-- <video class="responsive-video lazy-video" autoplay loop muted playsinline>
                         <source src="Photos/shriyash.mp4" type="video/mp4">
                         Your browser does not support the video tag.
-                    </video>
+                    </video> -->
                 </div>
 
                 <div class="about-col-2">
@@ -210,6 +253,24 @@
 
     <!-- CSS -->
     <style>
+        #music-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 1000;
+        }
+
+        #music-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
         .animated-text {
             display: inline-block;
             font-size: 32px;
@@ -1353,19 +1414,6 @@
 
     <!-- ---------------------------------------------------------------------------------------------------------- -->
 
-    <script>
-        const learnMoreLink = document.getElementById("learn-more-link");
-        const moreInfo = document.getElementById("more-info");
-
-        learnMoreLink.addEventListener("click", function (e) {
-            e.preventDefault();
-            if (moreInfo.style.display === "click" || moreInfo.style.display === "") {
-                moreInfo.style.display = "block";
-            } else {
-                moreInfo.style.display = "none";
-            }
-        });
-    </script>
 
 
     <!-- ----------------------------------------------------------------------------------------------------------- -->
