@@ -122,7 +122,7 @@ function toggleDrawer() {
 
 // Sections and corresponding icons
 const sections = [
-  { id: "home", icon: "home-outline" },
+  { id: "header", icon: "home-outline" },
   { id: "about", icon: "person-outline" },
   { id: "projects", icon: "book-outline" },
   { id: "contact", icon: "call-outline" },

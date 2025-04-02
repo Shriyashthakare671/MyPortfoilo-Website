@@ -523,6 +523,7 @@ body {
     cursor: pointer;
     z-index: 1000;
 }
+
 .navigation {
     position: fixed;
     top: 80px;
@@ -535,6 +536,7 @@ body {
     gap: 10px;
     z-index: 1000;
 }
+
 .nav-item {
     display: flex;
     align-items: center;
@@ -544,7 +546,9 @@ body {
     cursor: pointer;
     transition: background 0.3s;
 }
-.nav-item:hover, .nav-item.active {
+
+.nav-item:hover,
+.nav-item.active {
     background: #29fd53;
     border-radius: 5px;
 }
@@ -594,18 +598,37 @@ body {
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes slideIn {
-    from { opacity: 0; transform: translateX(-20px); }
-    to { opacity: 1; transform: translateX(0); }
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @keyframes bounce {
-    from { transform: translateY(0); }
-    to { transform: translateY(-10px); }
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
 }
 
 
@@ -931,8 +954,6 @@ a p {
     background: transparent;
 }
 
-
-
 #projects h1 {
     font-family: 'Times New Roman', Times, serif;
     font-size: xx-large;
@@ -963,11 +984,20 @@ a p {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 15px 25px rgba(0, 0, 0, .2);
-    transition: transform .3s ease-in-out, filter .3s ease-in-out;
+    transition: transform .5s ease-in-out, filter .5s ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transform-style: preserve-3d;
+    opacity: 0.3;
+    transform: scale(0.9);
+}
+
+.container-projects .card.active {
+    opacity: 1;
+    transform: scale(1.05);
+    z-index: 2;
+
 }
 
 .container-projects .card:hover {
@@ -1133,6 +1163,7 @@ a p {
 .container-projects .card:nth-child(3) .content a {
     background: #bb02ff;
 }
+
 .container-projects .card:nth-child(4) .circle,
 .container-projects .card:nth-child(4) .content a {
     background: #50d13f;

@@ -121,7 +121,11 @@
                 <div class="about-col-1">
                     <!-- Particle container -->
                     <div id="particles-js"></div>
-                    <img src="Photos/shri4.jpg" alt="Your Photo">
+                    <!-- <img src="Photos/shri4.jpg" alt="Your Photo"> -->
+                    <video class="responsive-video" autoplay loop muted playsinline>
+                        <source src="Photos/shri10.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
 
                 <div class="about-col-2">
@@ -615,14 +619,14 @@
 
         /* Media Queries for Responsive Design */
         @media screen and (max-width: 1024px) {
-    .about-col-1 img {
-        width: 120%; /* Makes the image responsive */
-        max-width: 550px; /* Allows the image to scale properly on laptops */
-        height: auto; /* Maintains aspect ratio */
-        display: block; /* Ensures correct rendering */
-        margin: 0 auto; /* Centers the image */
-    }
-}
+            .about-col-1 img {
+                width: 120%;
+                max-width: 550px;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+            }
+        }
 
 
         @media screen and (max-width: 768px) {
@@ -634,6 +638,32 @@
         @media screen and (max-width: 480px) {
             .about-col-1 img {
                 max-width: 100%;
+            }
+        }
+
+        .responsive-video {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 20%;
+            border-radius: 50%;
+            object-fit: cover;
+            mix-blend-mode: screen;
+            z-index: 2;
+            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+        }
+
+        .responsive-video:hover {
+            transform: scale(1.1);
+            filter: brightness(1);
+            animation: bounce 1.5s ease-in-out;
+            box-shadow: 0 5px 35px 0 rgba(58, 232, 203, 0.76);
+        }
+
+        @media (max-width: 768px) {
+            .responsive-video {
+                max-width: 90%;
+                border-radius: 50%;
             }
         }
 
@@ -750,7 +780,7 @@
         /* Contact Form */
         .contact-form {
             background: #262433;
-            padding: 40px;
+            padding: 60px;
             text-align: center;
         }
 
@@ -804,14 +834,14 @@
         /* Signature Image at the bottom-right corner */
         .signature-container {
             position: fixed;
-            bottom: 55px;
+            bottom: 35px;
             right: 1px;
             z-index: 9999;
             transform: rotate(350deg);
         }
 
         .signature-image {
-            width: 250px;
+            width: 220px;
             height: auto;
             border-radius: 10px;
             opacity: 0.7;
@@ -1130,7 +1160,7 @@
             particlesJS("particles-js", {
                 "particles": {
                     "number": {
-                        "value": 80,  // ⬆ Increased number of particles
+                        "value": 78,  // ⬆ Increased number of particles
                         "density": { "enable": true, "value_area": 600 }
                     },
                     "color": { "value": "#ffffff" },
@@ -1254,6 +1284,31 @@
             console.log("Particles.js for #projects loaded successfully!");
         });
 
+    </script>
+
+    <script> // projects card scrolling 
+        const cards = document.querySelectorAll('.card');
+
+        function handleScroll() {
+            let closestCard = null;
+            let minDistance = Number.POSITIVE_INFINITY;
+
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const distance = Math.abs(rect.top - window.innerHeight / 3);
+
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    closestCard = card;
+                }
+            });
+
+            cards.forEach(card => card.classList.remove('active'));
+            if (closestCard) closestCard.classList.add('active');
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
     </script>
 
     <!-- ---------------------------------------------------------------------------------------------------------- -->
