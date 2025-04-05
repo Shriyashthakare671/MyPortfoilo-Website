@@ -12,6 +12,17 @@
 <body>
     <div class="blush-light blush-top"></div>
     <div class="blush-light blush-bottom"></div>
+
+    <div class="welcome-container">
+        <img src="Photos/avatar2-unscreen.gif" class="avatar" id="avatar" alt="Animated Avatar">
+    </div>
+
+    <!-- <div class="welcome-container">
+        <video src="Photos/avatar2.mp4" class="avatar" id="avatar" autoplay muted playsinline></video>
+    </div> -->
+
+
+
     <audio id="background-music" loop>
         <source src="Photos/music1.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
@@ -67,7 +78,7 @@
 
 
             <div class="logo-container">
-                <img src="Photos/shriyash.jpg" class="logo" alt="Shriyash's Logo">
+                <img src="Photos/snapchat6-2.png" class="logo" alt="Shriyash's Logo">
             </div>
 
             <!-- <button class="drawer-btn" onclick="toggleDrawer()">☰ Menu</button> -->
@@ -166,19 +177,21 @@
                 <div class="about-col-1">
                     <!-- Particle container -->
                     <div id="particles-js"></div>
-                    <img src="Photos/shri.jpg" alt="Your Photo">
-                    <!-- <video class="responsive-video lazy-video" autoplay loop muted playsinline>
-                        <source src="Photos/shriyash.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video> -->
+                    <img src="Photos/shri.jpg" alt="Your Photo" oncontextmenu="return false;">
+
+                    <!--<video class="responsive-video lazy-video" autoplay loop muted playsinline controlslist="nodownload" oncontextmenu="return false;">
+    <source src="Photos/shriyash.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+ -->
                 </div>
 
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me.</h1><br>
                     <p>
 
-                        Hi there! I'm Shriyash Thakare, hailing from Nashik, Maharashtra. I'm an enthusiastic recent
-                        graduate with a keen interest in IT and a drive to make a positive impact through technology. My
+                        Hi Everyone I'm Shriyash Thakare, Hailing from Nashik, Maharashtra. I'm an enthusiastic recent
+                        graduate with a keep interest in IT and a drive to make a positive impact through technology. My
                         journey has been filled with learning and hands-on experiences that have shaped me into a
                         motivated IT professional. <br> <br>
                         I recently completed my post-graduation in Mobile Computing from Sunbeam Infotech and hold a
@@ -752,6 +765,8 @@
             mix-blend-mode: screen;
             z-index: 2;
             transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+            pointer-events: none;
+            user-select: none;
         }
 
         .responsive-video:hover {
@@ -1386,6 +1401,19 @@
         });
 
     </script>
+
+    <!-- For Avatar Annimation -->
+    <script>
+        setTimeout(() => {
+            const welcome = document.getElementById('welcome');
+            if (welcome) {
+                welcome.style.display = 'none';
+            }
+        }, 5000); 
+    </script>
+
+
+
 
     <script> // projects card scrolling 
         const cards = document.querySelectorAll('.card');
