@@ -134,23 +134,35 @@ body {
 .logo-container {
     display: flex;
     align-items: center;
-    justify-content: center; /* Optional: centers the logo horizontally */
+    justify-content: center;
 }
 
 .logo {
-    width: 140px;
-    height: 170px;
+    width: 100px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    transition: transform 0.3s, box-shadow 0.5s;
+    transform: scale(0.8); 
+    transition: transform 0.3s ease, box-shadow 0.5s ease;
     cursor: pointer;
 }
 
 
 
+/* Optional: Tweak on very small screens */
+@media (max-width: 480px) {
+    .logo {
+        width: 30vw;
+        max-width: 100px;
+    }
+}
+
+
+
+
 /* Hover effect on logo */
 .logo:hover {
-    transform: scale(1.1);
+    transform: scale(1);
     box-shadow: 0 0 15px #10e6c2;
 }
 
@@ -270,8 +282,8 @@ body {
     }
 
     .logo {
-        width: 70px;
-        height: 70px;
+        width: 90px;
+        height: 100px;
     }
 }
 
