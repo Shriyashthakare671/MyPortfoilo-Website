@@ -670,6 +670,7 @@ body {
     font-size: 30px;
     margin-top: 13px;
     background: linear-gradient(90deg, #b65e7a, #6c83cf);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
@@ -817,13 +818,13 @@ body {
 /* For small screens (mobile phones) */
 @media screen and (max-width: 768px) {
     .about-col-1 {
-        flex-basis: 100%;
+        flex-basis: 90%;
         text-align: center;
     }
 
     .about-col-1 img {
         width: 14rem;
-        height: 14rem;
+        height: 5rem;
         margin: 2% auto;
     }
 }
