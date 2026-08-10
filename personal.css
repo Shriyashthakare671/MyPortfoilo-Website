@@ -3569,18 +3569,16 @@ a p {
         0 4px 20px
         rgba(0, 0, 0, 0.2);
 }
-
-
 /* =========================================================
    FRONT CONTENT
 ========================================================= */
 
-.container-projects .card-front .content {
+.container-projects .card-front .card-content {
     position: relative;
 
     width: 100%;
 
-    padding: 30px;
+    padding: 0 22px 24px;
 
     box-sizing: border-box;
 
@@ -3625,8 +3623,7 @@ a p {
 .container-projects .card-front p {
     margin: 0 0 17px;
 
-    color:
-        rgba(255, 255, 255, 0.65);
+    color: rgba(255, 255, 255, 0.65);
 
     font-size: 13px;
 
@@ -3725,8 +3722,7 @@ a p {
 
 
 .container-projects .view-btn:hover {
-    transform:
-        translateY(-2px);
+    transform: translateY(-2px);
 
     box-shadow:
         0 10px 28px
@@ -4117,6 +4113,72 @@ a p {
         transition: none !important;
     }
 
+}
+
+/* =========================================================
+   PROJECT CARD CONTENT SPACING
+========================================================= */
+
+.project-card {
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+/* Card content / front side */
+
+.project-card-content,
+.project-card-front,
+.project-info {
+    box-sizing: border-box;
+    padding: 24px 26px 26px;
+}
+
+
+/* Project category */
+
+.project-card-content .project-category,
+.project-card-front .project-category,
+.project-info .project-category {
+    margin-left: 0;
+}
+
+
+/* Project title */
+
+.project-card-content h3,
+.project-card-front h3,
+.project-info h3 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+/* Description */
+
+.project-card-content p,
+.project-card-front p,
+.project-info p {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+/* Technology tags */
+
+.project-tags,
+.project-tech,
+.project-card-content .tags {
+    margin-left: 0;
+}
+
+
+/* View Details button */
+
+.project-card-content .project-btn,
+.project-card-front .project-btn,
+.project-info .project-btn {
+    margin-left: 0;
 }
 
 /* ---------------------skills----------------------- */
