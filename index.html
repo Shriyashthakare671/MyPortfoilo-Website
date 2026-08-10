@@ -1,13 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shriyash Thakare - Web Developer</title>
+    <link rel="icon" href="data:,">
+
+    <title>Shriyash Thakare | Developer Portfolio</title>
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="personal.css">
-    <script src="https://kit.fontawesome.com/fbe1d8223e.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/fbe1d8223e.js" crossorigin="anonymous">
+    </script>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js">
+    </script>
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js">
+    </script>
+
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js">
+    </script>
+
+    <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+</script>
+
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js">
+    </script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js">
+    </script>
+
+    <!-- GSAP ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js">
+    </script>
+
+    <!-- Vanilla Tilt -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js">
+    </script>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
 </head>
 
 <body>
@@ -67,109 +112,325 @@
 
 
 
-    <section id="header">
-        <div class="container">
-            <!-- Particle container -->
-            <div id="particles-js"></div>
-            <header>
-                <nav>
-                    <h2 class="animated-text" data-text="Welcome To My Portfolio.">Welcome To My Portfolio.</h2>
-                </nav>
-            </header>
+    <!-- =========================
+     HERO / HEADER SECTION
+========================= -->
+    <section id="header" class="hero-section">
 
+        <!-- Background particles -->
+        <div id="particles-js" class="particles-background"></div>
 
-            <div class="logo-container">
-                <img src="Photos/snapchat6-2.png" class="logo" alt="Shriyash's Logo">
-            </div>
-            
+        <!-- Glow effects -->
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
 
-            <!-- <button class="drawer-btn" onclick="toggleDrawer()">☰ Menu</button> -->
+        <!-- =========================
+         TOP NAVIGATION
+    ========================== -->
+        <div class="hero-navbar">
 
-            <!-- Left-Side Drawer -->
-            <div id="drawer" class="drawer">
-                <button class="close-btn" onclick="closeDrawer()">✖</button>
-                <ul>
-                    <li><a href="#" onclick="navigateTo('header')">Home</a></li>
-                    <li><a href="#" onclick="navigateTo('about')">About</a></li>
-                    <li><a href="#" onclick="navigateTo('projects')">Projects</a></li>
-                    <li><a href="#" onclick="navigateTo('contact')">Contact</a></li>
-                </ul>
-            </div>
+            <!-- Logo / Brand -->
+            <a href="#header" class="brand-logo">
+                <span class="brand-dot"></span>
+                ST
+            </a>
 
-            <div id="navCircle" class="nav-circle" onclick="toggleNavMenu()">
-                <ion-icon id="navIcon" name="home-outline"></ion-icon>
-            </div>
+            <!-- Desktop Navigation -->
+            <nav class="desktop-navigation">
 
-            <ul id="navMenu" class="navigation">
-                <li id="home-nav" class="nav-item" onclick="navigateTo('header')">
+                <a href="#header" class="nav-link active">
                     <ion-icon name="home-outline"></ion-icon>
-                    <span class="text">Home</span>
-                </li>
-                <li id="about-nav" class="nav-item" onclick="navigateTo('about')">
+                    <span>Home</span>
+                </a>
+
+                <a href="#about" class="nav-link">
                     <ion-icon name="person-outline"></ion-icon>
-                    <span class="text">About</span>
-                </li>
-                <li id="projects-nav" class="nav-item" onclick="navigateTo('projects')">
-                    <ion-icon name="book-outline"></ion-icon>
-                    <span class="text">Projects</span>
-                </li>
-                <li id="contact-nav" class="nav-item" onclick="navigateTo('contact')">
-                    <ion-icon name="call-outline"></ion-icon>
-                    <span class="text">Contact</span>
-                </li>
-            </ul>
-
-
-            <div class="resume-button">
-                <a href="Photos/Shriyash_2026.pdf" download="Shriyash_Resume" class="btn">
-                    <ion-icon name="download-outline"></ion-icon>
-                    Download Resume
+                    <span>About</span>
                 </a>
-            </div>
 
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/mr-shriyash-thakare-05695b1b2" target="_blank" class="social-btn">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                    LinkedIn
+                <a href="#projects" class="nav-link">
+                    <ion-icon name="folder-open-outline"></ion-icon>
+                    <span>Projects</span>
                 </a>
-                <a href="https://github.com/Shriyashthakare671" target="_blank" class="social-btn">
-                    <ion-icon name="logo-github"></ion-icon>
-                    GitHub
+
+                <a href="#contact" class="nav-link">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <span>Contact</span>
                 </a>
+
+            </nav>
+
+            <!-- Right controls -->
+            <div class="nav-controls">
+
+                <!-- Theme// -->
+                <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+
+                    <ion-icon id="theme-icon" name="moon-outline">
+                    </ion-icon>
+
+                </button>
+
+                <!-- Mobile Menu -->
+                <button id="mobile-menu-btn" class="mobile-menu-btn" type="button" aria-label="Open navigation">
+
+                    <ion-icon name="menu-outline"></ion-icon>
+
+                </button>
+
             </div>
 
         </div>
 
 
-        <div class="header-text">
-            <div class="title-container">
-                <i class="fa-solid fa-user fa-flip fa-xl" style="color: #8d9ccf;"></i>
-                <h3>Hello Everyone,<br> My Name -- <span>Mr Shriyash Sunil Thakare</span>.</h3>
-            </div>
+        <!-- =========================
+         MOBILE NAVIGATION
+    ========================== -->
+        <div id="mobile-nav" class="mobile-nav">
 
-            <div class="line"></div>
+            <button id="mobile-close-btn" class="mobile-close-btn" type="button">
 
-            <!-- Animated Text -->
-            <div class="animated-text">
-                <span>Android Developer</span>
-                <span>React Native Developer</span>
-                <span>Frontend Developer</span>
-            </div>
+                <ion-icon name="close-outline"></ion-icon>
 
-            <p>
-            <h6>
-                <b>I seek challenging opportunities where I can fully use my skills
-                    for the success of the organization.</b> <br>
-                I am a highly motivated and skilled IT professional and a recent graduate with a passion for
-                cutting-edge
-                technology and a drive to make a positive impact in the world of engineering. Armed with a solid
-                foundation
-                in IT principles and hands-on experience in diverse projects, I am eager to embark on a rewarding career
-                journey. Through a combination of coursework and extracurricular activities, I honed my problem-solving
-                abilities, analytical thinking, and teamwork skills.
-            </h6>
-            </p>
+            </button>
+
+            <a href="#header" class="mobile-nav-link">
+                <ion-icon name="home-outline"></ion-icon>
+                Home
+            </a>
+
+            <a href="#about" class="mobile-nav-link">
+                <ion-icon name="person-outline"></ion-icon>
+                About
+            </a>
+
+            <a href="#projects" class="mobile-nav-link">
+                <ion-icon name="folder-open-outline"></ion-icon>
+                Projects
+            </a>
+
+            <a href="#certifications" class="mobile-nav-link">
+                <ion-icon name="ribbon-outline"></ion-icon>
+                Certifications
+            </a>
+
+            <a href="#skills-dashboard" class="mobile-nav-link">
+                <ion-icon name="stats-chart-outline"></ion-icon>
+                Skills
+            </a>
+
+            <a href="#aws-etl" class="mobile-nav-link">
+                <ion-icon name="cloud-outline"></ion-icon>
+                AWS & ETL
+            </a>
+
+            <a href="#contact" class="mobile-nav-link">
+                <ion-icon name="mail-outline"></ion-icon>
+                Contact
+            </a>
+
         </div>
+
+
+        <!-- =========================
+         HERO CONTENT
+    ========================== -->
+        <div class="hero-container">
+
+            <!-- =========================
+             LEFT SIDE
+        ========================== -->
+            <div class="hero-left">
+
+                <!-- Small label -->
+                <div class="hero-badge">
+                    <span class="status-dot"></span>
+                    Available for opportunities
+                </div>
+
+
+                <!-- Main heading -->
+                <div class="hero-heading">
+
+                    <p class="hero-intro">
+                        Hello Everyone,
+                    </p>
+
+                    <h1>
+                        I'm
+                        <span class="gradient-text">
+                            Shriyash Thakare
+                        </span>
+                    </h1>
+
+                    <p class="hero-role">
+                        <span id="typing-role">
+                            React Native Developer
+                        </span>
+                    </p>
+
+                </div>
+
+
+                <!-- Divider -->
+                <div class="hero-line"></div>
+
+
+                <!-- Description -->
+                <p class="hero-description">
+
+                    I am a passionate IT professional focused on building
+                    modern, scalable and user-friendly applications using
+                    <strong>Android, React, React Native, And Now Learning AWS and ETL</strong>
+                    technologies.
+
+                </p>
+
+
+                <!-- CTA Buttons -->
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="btn-primary">
+
+                        <ion-icon name="rocket-outline"></ion-icon>
+
+                        View Projects
+
+                    </a>
+
+
+                    <a href="Photos/Shriyash_2026.pdf" download="Shriyash_Resume" class="btn-secondary">
+
+                        <ion-icon name="download-outline"></ion-icon>
+
+                        Download Resume
+
+                    </a>
+
+                </div>
+
+
+                <!-- Social links -->
+                <div class="hero-socials">
+
+                    <a href="https://www.linkedin.com/in/mr-shriyash-thakare-05695b1b2" target="_blank"
+                        rel="noopener noreferrer">
+
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                        LinkedIn
+
+                    </a>
+
+
+                    <a href="https://github.com/Shriyashthakare671" target="_blank" rel="noopener noreferrer">
+
+                        <ion-icon name="logo-github"></ion-icon>
+                        GitHub
+
+                    </a>
+
+                </div>
+
+
+                <!-- =========================
+                 HERO STATS
+            ========================== -->
+                <div class="hero-stats">
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            <ion-icon name="code-slash-outline"></ion-icon>
+                        </div>
+
+                        <div>
+                            <h3>8+</h3>
+                            <p>Projects</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            <ion-icon name="layers-outline"></ion-icon>
+                        </div>
+
+                        <div>
+                            <h3>10+</h3>
+                            <p>Technologies</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            <ion-icon name="time-outline"></ion-icon>
+                        </div>
+
+                        <div>
+                            <h3>1000+</h3>
+                            <p>Hours Coding</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+     RIGHT SIDE - 3D LAPTOP
+========================= -->
+            <div class="hero-right">
+
+                <div class="laptop-scene">
+
+                    <!-- Ambient blue/purple glow -->
+                    <div class="laptop-glow"></div>
+
+                    <!-- Three.js will render the laptop here -->
+                    <div id="laptop-container" class="laptop-container">
+                        <!-- DO NOT put another .laptop inside here -->
+                    </div>
+
+                    <!-- Technology badges -->
+                    <div class="tech-orbit tech-orbit-1">
+                        <ion-icon name="logo-react"></ion-icon>
+                        <span>React</span>
+                    </div>
+
+                    <div class="tech-orbit tech-orbit-2">
+                        <span>JAVA</span>
+                    </div>
+
+                    <div class="tech-orbit tech-orbit-3">
+                        <ion-icon name="cloud-outline"></ion-icon>
+                        <span>AWS</span>
+                    </div>
+
+                    <div class="tech-orbit tech-orbit-4">
+                        <span>ETL</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator">
+
+                <span>Scroll to explore</span>
+
+                <ion-icon name="arrow-down-outline"></ion-icon>
+
+            </div>
+
     </section>
 
 
@@ -177,94 +438,301 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <!-- Particle container -->
-                    <div id="particles-js"></div>
                     <img src="Photos/snapchat6-2.png" alt="Your Photo" oncontextmenu="return false;">
-
-                    <!--<video class="responsive-video lazy-video" autoplay loop muted playsinline controlslist="nodownload" oncontextmenu="return false;">
-    <source src="Photos/shriyash.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
- -->
                 </div>
 
                 <div class="about-col-2">
-                    <h1 class="sub-title">About Me.</h1><br>
-                    <p>
 
-                        Hi Everyone I'm Shriyash Thakare, Hailing from Nashik, Maharashtra. I'm an enthusiastic recent
-                        graduate with a keep interest in IT and a drive to make a positive impact through technology. My
-                        journey has been filled with learning and hands-on experiences that have shaped me into a
-                        motivated IT professional. <br> <br>
-                        I recently completed my post-graduation in Mobile Computing from Sunbeam Infotech and hold a
-                        Bachelor's degree in Information technology from Pune Vidyarthi Grihas College of Engineering
-                        This institution is affiliated with the University of Savitribai Phule Pune University. <br>
-                        I completed an intensive Full Stack Java course with TNS India Foundation,
-                        significantly enhancing my programming skills. My goal is to design and develop software
-                        Applications that
-                        aligns with the latest technological trends, creating innovative solutions in the ever-evolving
-                        tech landscape.
-                    </p>
-                    <br>
+                    <h1 class="sub-title">About Me</h1>
+
+                    <div class="about-card">
+
+                        <p>
+                            Hi, I'm <strong>Shriyash Thakare</strong>, a passionate Software Developer
+                            specializing in Android, React JS, React Native, Java, MySql AWS and ETL technologies.
+
+                            I completed my Bachelor's Degree in Information Technology and later pursued
+                            Mobile Computing from Sunbeam Institute ( CDAC ), Pune.
+
+                            My goal is to build scalable applications and cloud-based solutions that solve
+                            real-world business problems.
+                        </p>
+
+                    </div>
+
+                    <div class="about-highlights">
+
+                        <div class="highlight-card">
+                            <h2>5+</h2>
+                            <p>Projects Deploy on Netlify</p>
+                        </div>
+
+                        <div class="highlight-card">
+                            <h2>3+</h2>
+                            <p>Years Learning</p>
+                        </div>
+
+                        <div class="highlight-card">
+                            <h2>1000+</h2>
+                            <p>Faced Coding Bugs And Errors</p>
+                        </div>
+
+                    </div>
 
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
-                        <p class="tab-links" onclick="openTab('experience')">Experience</p>
-                        <p class="tab-links" onclick="openTab('education')">Education</p>
+
+                        <p class="tab-links active-link" onclick="openTab('skills')">
+                            Skills
+                        </p>
+
+                        <p class="tab-links" onclick="openTab('experience')">
+                            Experience
+                        </p>
+
+                        <p class="tab-links" onclick="openTab('education')">
+                            Education
+                        </p>
+
                     </div>
 
-                    <!-- Tab Contents -->
+                    <!-- Skills -->
+
                     <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>Technical Skills:</span> ReactJS, React Native, Javascript, HTML, CSS,
-                                Android, Java, Frontend Development, MySQL, My-SQL, SQLite Database,
-                                Agile Methodologies</li><br>
-                            <li><span>Soft Skills:</span> Quick Learner, Problem Solver, Creativity, Positive Attitude,
-                                Good Communication, Multi-Tasking</li><br>
-                            <li><span>Software:</span> Visual Studio Code, Canva, Trello, Android Studio, Spring-Tool
-                                Suit </li><br>
-                        </ul>
+
+                        <div class="skills-grid">
+
+                            <span>React</span>
+                            <span>React Native</span>
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>AWS</span>
+                            <span>ETL</span>
+                            <span>MySQL</span>
+                            <span>Node.js</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>GitHub</span>
+
+                        </div>
+
                     </div>
+
+
+
+                    <!-- Experience -->
 
                     <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>Web Developer Intern:</span> Paarsh Infotech, Nashik. <span>Sep 2021 - Nov
-                                    2021</span></li><br>
-                            <li><span>Java Full Stack Development:</span> Issued by TNS India
-                                Foundation. <span>Oct 2022 - July 2023</span></li><br>
-                        </ul>
+
+                       <div class="timeline">
+
+    <!-- EXPERIENCE 01 -->
+
+    <div class="timeline-item">
+
+        <h3>
+            Web Developer Intern
+        </h3>
+
+        <p>
+            Paarsh Infotech
+        </p>
+
+        <p>
+            Web development internship focused on
+            designing and developing responsive web
+            applications and frontend functionality.
+        </p>
+
+        <span>
+            Sep 2021 – Nov 2021
+        </span>
+
+    </div>
+
+
+    <!-- EXPERIENCE 02 -->
+
+    <div class="timeline-item">
+
+        <h3>
+            Java Full Stack Development Training
+        </h3>
+
+        <p>
+            TNS India Foundation
+        </p>
+
+        <p>
+            Full Stack Java development training covering
+            Java, Spring Boot, REST APIs, databases and
+            application development.
+        </p>
+
+        <span>
+            Oct 2022 – Jul 2023
+        </span>
+
+    </div>
+
+</div>
+
                     </div>
+
+                    <!-- Education -->
 
                     <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>CDAC:</span> Center Of Development Advance Computing In Android Development. From
-                                SUNBEAM INSTITUTE, Pune.</li><br>
 
-                            <li><span>Degree:</span> Bachelor- Information technology. From PUNE VIDYARTHI GRIHA'S
-                                COLLEGE OF ENGINEERING,
-                                NASHIK</li><br>
-                            <li><span>HSC:</span> SNJB Secondary And Higher Secondary School, Chandwad, Nashik.</li><br>
-                            <li><span>SSC:</span> SNJB Secondary And Higher Secondary School, Chandwad, Nashik.</li>
-                            <br>
-                        </ul>
-                    </div>
+    <div class="timeline">
+
+        <!-- POST GRADUATION -->
+
+        <div class="timeline-item">
+
+            <h3>
+                Post Graduation Diploma in Advanced Computing
+            </h3>
+
+            <p>
+                CDAC – Centre for Development of Advanced Computing
+            </p>
+
+            <p>
+                Sunbeam Institute of Technology, Pune
+            </p>
+
+            <span>
+                2024
+            </span>
+
+        </div>
 
 
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>Degree:</span> <span>2019-2023: </span>BE - Information Technology @ Pune
-                                Vidyarthi Griha's College Of Engineering & S. S. Dhamankar Institute Of Management,
-                                Nashik.</li><br>
-                            <li><span>HSC:</span> <span>2018: </span> @ SNJB's Secondary and Higher Secondary High
-                                School, Chandwad, Nashik.</li><br>
-                            <li><span>SSC:</span> <span>2017: </span> @ SNJB's Secondary and Higher Secondary High
-                                School, Chandwad, Nashik.</li><br>
-                        </ul>
-                    </div>
+        <!-- DEGREE -->
+
+        <div class="timeline-item">
+
+            <h3>
+                Bachelor of Engineering – Information Technology
+            </h3>
+
+            <p>
+                Pune Vidyarthi Griha's College of Engineering &
+                S. S. Dhamankar Institute of Management, Nashik
+            </p>
+
+            <span>
+                2019 – 2023
+            </span>
+
+        </div>
+
+
+        <!-- HSC -->
+
+        <div class="timeline-item">
+
+            <h3>
+                Higher Secondary Certificate (HSC)
+            </h3>
+
+            <p>
+                SNJB's Secondary and Higher Secondary High School,
+                Chandwad, Nashik
+            </p>
+
+            <span>
+                2018
+            </span>
+
+        </div>
+
+
+        <!-- SSC -->
+
+        <div class="timeline-item">
+
+            <h3>
+                Secondary School Certificate (SSC)
+            </h3>
+
+            <p>
+                SNJB's Secondary and Higher Secondary High School,
+                Chandwad, Nashik
+            </p>
+
+            <span>
+                2017
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
                 </div>
             </div>
         </div>
     </section>
+
+
+
+    <!-- <section id="experience">
+        <h2>Experience Timeline</h2>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <h3>2022</h3>
+                <p>Human Resource & Recruitment System</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>2023</h3>
+                <p>Placement Management System</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>2025</h3>
+                <p>Society Management Application</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>2026</h3>
+                <p>AgriInfraVenture</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="aws-etl">
+
+        <h2>AWS & ETL Architecture</h2>
+
+        <div class="pipeline">
+
+            <div class="stage">Source Data</div>
+
+            <div class="arrow">↓</div>
+
+            <div class="stage">AWS S3</div>
+
+            <div class="arrow">↓</div>
+
+            <div class="stage">AWS Glue</div>
+
+            <div class="arrow">↓</div>
+
+            <div class="stage">Redshift</div>
+
+            <div class="arrow">↓</div>
+
+            <div class="stage">Dashboard</div>
+
+        </div>
+
+    </section> -->
 
     <!-- CSS -->
     <style>
@@ -1027,487 +1495,2580 @@
         }
     </style>
 
-    <!-- ----------------------Projects------------------- -->
+    <!-- =========================================================
+     PROJECTS SECTION
+========================================================= -->
+
+    <!-- =========================================================
+     PROJECTS SECTION
+========================================================= -->
+
     <section id="projects">
-        <!-- Particle container -->
-        <!-- <div id="particles-project"></div> -->
-        <h1>My Projects:</h1>
+
+        <!-- =========================
+         HEADER
+    ========================== -->
+
+        <div class="project-header">
+
+            <span class="section-badge">
+                <ion-icon name="code-slash-outline"></ion-icon>
+                My Work
+            </span>
+
+            <h1>Featured Projects</h1>
+
+            <p>
+                Web Applications, Mobile Apps,
+                AWS &amp; ETL Solutions
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+         FILTER
+    ========================== -->
+
+        <div class="project-filter">
+
+            <button type="button" class="filter-btn active" data-filter="all">
+                All
+            </button>
+
+            <button type="button" class="filter-btn" data-filter="react">
+                React
+            </button>
+
+            <button type="button" class="filter-btn" data-filter="mobile">
+                Mobile Apps
+            </button>
+
+            <button type="button" class="filter-btn" data-filter="aws">
+                AWS
+            </button>
+
+            <button type="button" class="filter-btn" data-filter="etl">
+                ETL
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+         PROJECT GRID
+    ========================== -->
+
         <div class="container-projects">
 
-            <!-- <br> -->
 
-            <div class="card">
+            <!-- =================================================
+             PROJECT 01
+        ================================================== -->
+
+            <article class="card" data-category="aws etl">
+
                 <div class="card-inner">
-                    <!-- Front side of the card -->
+
+                    <!-- FRONT -->
+
                     <div class="card-front">
+
                         <div class="circle">
                             <h2>01</h2>
                         </div>
-                        <div class="content">
-                            <p>Anti-Spoofing Application.</p>
-                            <b style="color: #ee0a0a;">( Android, React-Native, NodeJS,ExpressJS,MY-SQL.) </b>
-                            <a href="#" onclick="flipCard(event)">Read More</a>
-                        </div>
-                    </div>
-                    <!-- Back side of the card -->
-                    <div class="card-back">
-                        <h5>
-                            ZeroSpoof appears to be a mobile application designed for anti-spoofing and spam call
-                            blocking. The project contains a React Native application with key functionalities related
-                            to detecting and blocking spam or spoofed calls. <br>
-                            The application uses React Navigation for managing app screens and navigation, and
-                            dependencies like expo, axios, react-native-call-detection, and async-storage indicate that
-                            it interacts with external APIs and stores user settings locally.it includes
-                            user authentication features (LoginScreen.js, SignupScreen.js), suggesting that users may
-                            need to sign in for personalized settings.
-                        </h5>
-                        <a href="https://github.com/Shriyashthakare671/Anti-Spam-Application.git" target="_blank"
-                            class="github-link">View on GitHub</a>
-                        <button class="back-btn" onclick="flipCardBack(event)">Back</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="card">
+                        <div class="card-content">
+
+                            <span class="project-type">
+                                Cloud Data Engineering
+                            </span>
+
+                            <h3>
+                                AWS ETL Pipeline
+                            </h3>
+
+                            <p>
+                                Cloud-based data ingestion,
+                                transformation and data
+                                warehouse pipeline.
+                            </p>
+
+                            <div class="tech-stack">
+
+                                <span>S3</span>
+                                <span>Glue</span>
+                                <span>Redshift</span>
+                                <span>SQL</span>
+
+                            </div>
+
+                            <button type="button" class="view-btn">
+                                View Details
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BACK -->
+
+                    <div class="card-back">
+
+                        <div class="back-content">
+
+                            <span class="project-number">
+                                PROJECT 01
+                            </span>
+
+                            <h3>
+                                AWS ETL Pipeline
+                            </h3>
+
+                            <p class="back-description">
+                                A cloud-based ETL architecture
+                                designed for data ingestion,
+                                transformation and analytics.
+                            </p>
+
+                            <ul>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>Data ingestion from Amazon S3</span>
+                                </li>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>AWS Glue ETL processing</span>
+                                </li>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>Data transformation</span>
+                                </li>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>Amazon Redshift warehouse</span>
+                                </li>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>SQL reporting and analytics</span>
+                                </li>
+
+                            </ul>
+
+                            <div class="tech-stack">
+
+                                <span>AWS</span>
+                                <span>ETL</span>
+                                <span>SQL</span>
+
+                            </div>
+
+                        </div>
+
+                        <button type="button" class="back-btn">
+                            ← Back
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+             PROJECT 02
+        ================================================== -->
+
+            <article class="card" data-category="mobile">
+
                 <div class="card-inner">
-                    <!-- Front side of the card -->
+
                     <div class="card-front">
+
                         <div class="circle">
                             <h2>02</h2>
                         </div>
-                        <div class="content">
-                            <p>Employee-Management-System.</p>
-                            <b style="color: #ee0a0a;">( Android, ReactJS, NodeJS, ExpressJS, MY-SQL.) </b>
-                            <a href="#" onclick="flipCard(event)">Read More</a>
+
+                        <div class="card-content">
+
+                            <span class="project-type">
+                                Mobile Application
+                            </span>
+
+                            <h3>
+                                ZeroSpoof
+                            </h3>
+
+                            <p>
+                                Anti-spoofing and spam
+                                call detection application.
+                            </p>
+
+                            <div class="tech-stack">
+
+                                <span>React Native</span>
+                                <span>NodeJS</span>
+                                <span>Express</span>
+                                <span>MySQL</span>
+
+                            </div>
+
+                            <button type="button" class="view-btn">
+                                View Details
+                            </button>
+
                         </div>
+
                     </div>
-                    <!-- Back side of the card -->
+
+
                     <div class="card-back">
-                        <h5>
-                            The Employee Management System is a full-stack application built with React for the
-                            frontend, Node.js and Express.js for the backend, and MySQL for database management.
-                            <br>
-                            It allows users to perform CRUD operations (Create, Read, Update, Delete) on employee
-                            records,
-                            with a responsive UI designed for both desktop and mobile devices. The backend API is
-                            secured with JWT authentication to manage user roles and permissions.
-                            <br>The database is optimized to handle employee data efficiently, with features like
-                            search, filter, and
-                            pagination to improve performance.
-                            <br>The system ensures smooth user experience and robust data
-                            management for any organization.
-                        </h5>
-                        <a href="https://github.com/Shriyashthakare671/Employee-Management-System-..git" target="_blank"
-                            class="github-link">View on GitHub</a>
-                        <button class="back-btn" onclick="flipCardBack(event)">Back</button>
+
+                        <div class="back-content">
+
+                            <span class="project-number">
+                                PROJECT 02
+                            </span>
+
+                            <h3>
+                                ZeroSpoof
+                            </h3>
+
+                            <p class="back-description">
+                                Mobile application focused on
+                                detecting suspicious and spam calls.
+                            </p>
+
+                            <ul>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>Spam call detection</span>
+                                </li>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>User authentication</span>
+                                </li>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>Local storage</span>
+                                </li>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>React Navigation</span>
+                                </li>
+
+                            </ul>
+
+                            <div class="tech-stack">
+
+                                <span>React Native</span>
+                                <span>NodeJS</span>
+                                <span>MySQL</span>
+
+                            </div>
+
+                            <a href="https://github.com/Shriyashthakare671/Anti-Spam-Application.git" target="_blank"
+                                rel="noopener noreferrer" class="github-link">
+
+                                <ion-icon name="logo-github"></ion-icon>
+                                GitHub
+
+                            </a>
+
+                        </div>
+
+                        <button type="button" class="back-btn">
+                            ← Back
+                        </button>
+
                     </div>
+
                 </div>
-            </div>
+
+            </article>
 
 
+            <!-- =================================================
+             PROJECT 03
+        ================================================== -->
 
-            <div class="card">
+            <article class="card" data-category="react">
+
                 <div class="card-inner">
-                    <!-- Front side of the card -->
+
                     <div class="card-front">
+
                         <div class="circle">
                             <h2>03</h2>
                         </div>
-                        <div class="content">
-                            <p>Human Resource And Recruitment System.</p>
-                            <b style="color: #ee0a0a;">( Blockchain, PHP, HTML, CSS, JavaScript, Python.) </b>
-                            <a href="#" onclick="flipCard(event)">Read More</a>
+
+                        <div class="card-content">
+
+                            <span class="project-type">
+                                Full Stack Application
+                            </span>
+
+                            <h3>
+                                Employee Management System
+                            </h3>
+
+                            <p>
+                                Enterprise employee data
+                                management platform.
+                            </p>
+
+                            <div class="tech-stack">
+
+                                <span>React</span>
+                                <span>NodeJS</span>
+                                <span>Express</span>
+                                <span>MySQL</span>
+
+                            </div>
+
+
+
+                            <button type="button" class="view-btn">
+                                View Details
+                            </button>
+
                         </div>
+
                     </div>
 
-                    <!-- Back side of the card -->
+
                     <div class="card-back">
-                        <h5>
-                            College Final Year Project-<br>
-                            • August 2022 - June 2023<br>
-                            The goal was to develop a Human Resource System for freshers or experienced candidates
-                            which can automatically assign departments to freshers or experienced candidates coming
-                            into the company.<br>
-                            • For freshers, there will be an aptitude test focusing on various areas such as front-end,
-                            Backend, and database. After analysis of scores obtained by the candidate's system will
-                            suggest the most suitable Department for that candidate and it will show the score of that
-                            candidate in Aptitude to HR.<br>
-                            • The system can have Profiles for Multiple HRs and it will have interactive dashboards.
-                        </h5>
-                        <a href="https://github.com/Shriyashthakare671/Human-Resource-Management-System.git"
-                            target="_blank" class="github-link">View on GitHub</a>
-                        <button class="back-btn" onclick="flipCardBack(event)">Back</button>
+
+                        <div class="back-content">
+
+                            <span class="project-number">
+                                PROJECT 03
+                            </span>
+
+                            <h3>
+                                Employee Management System
+                            </h3>
+
+                            <ul>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>Employee CRUD operations</span>
+                                </li>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>JWT authentication</span>
+                                </li>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>Role-based authorization</span>
+                                </li>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>Advanced search and filters</span>
+                                </li>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>Responsive dashboard</span>
+                                </li>
+
+                            </ul>
+
+                            <div class="tech-stack">
+
+                                <span>React</span>
+                                <span>Node</span>
+                                <span>MySQL</span>
+
+                            </div>
+
+                            <a href="https://github.com/Shriyashthakare671/Employee-Management-System-..git"
+                                target="_blank" rel="noopener noreferrer" class="github-link">
+
+                                <ion-icon name="logo-github"></ion-icon>
+                                GitHub
+
+                            </a>
+
+                        </div>
+
+                        <button type="button" class="back-btn">
+                            ← Back
+                        </button>
 
                     </div>
+
                 </div>
-            </div>
+
+            </article>
 
 
-            <div class="card">
+            <!-- =================================================
+             PROJECT 04
+        ================================================== -->
+
+            <article class="card" data-category="react">
+
                 <div class="card-inner">
-                    <!-- Front side of the card -->
+
                     <div class="card-front">
+
                         <div class="circle">
                             <h2>04</h2>
                         </div>
-                        <div class="content">
-                            <p> Society Management System.</p>
-                            <b style="color: #ee0a0a;">( Android, ReactJS, NodeJS, ExpressJS, MY-SQL.) </b>
-                            <a href="#" onclick="flipCard(event)">Read More</a>
+
+                        <div class="card-content">
+
+                            <span class="project-type">
+                                Engineering Project
+                            </span>
+
+                            <h3>
+                                HR &amp; Recruitment System
+                            </h3>
+
+                            <p>
+                                Smart recruitment and
+                                candidate assessment platform.
+                            </p>
+
+                            <div class="tech-stack">
+
+                                <span>PHP</span>
+                                <span>Python</span>
+                                <span>Blockchain</span>
+                                <span>JS</span>
+
+                            </div>
+
+                            <button type="button" class="view-btn">
+                                View Details
+                            </button>
+
                         </div>
+
                     </div>
 
-                    <!-- Back side of the card -->
+
                     <div class="card-back">
-                        <h5>
-                            The project is developed by in react as its frontend using node as a platform which is a
-                            library of JS, where are handling the client facing request and portal design.
-                            <br>
-                            for database we have ued MYSql to store our society, secretary, owner and other related
-                            details. for the backend we have choosen ExpressJs, NodeJs. NodeJS Is open source , cross
-                            platform JS runtime environment. Backend APIs it handle routing and CORS is used to restrict
-                            resources on a web server based on the origin of the request.
-                            <br>
-                            For Security we have use JsonWebToken And SHA256 Hashing algorithum.
-                        </h5>
-                        </h5>
-                        <a href="https://github.com/Shriyashthakare671/SocietyManagementSystem.git" target="_blank"
-                            class="github-link">View on GitHub</a>
-                        <button class="back-btn" onclick="flipCardBack(event)">Back</button>
+
+                        <div class="back-content">
+
+                            <span class="project-number">
+                                PROJECT 04
+                            </span>
+
+                            <h3>
+                                HR &amp; Recruitment System
+                            </h3>
+
+                            <ul>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>Final year engineering project</span>
+                                </li>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>Aptitude-based candidate analysis</span>
+                                </li>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>Automated department allocation</span>
+                                </li>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>HR dashboard and reports</span>
+                                </li>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>Multi-HR user management</span>
+                                </li>
+
+                            </ul>
+
+                            <div class="tech-stack">
+
+                                <span>PHP</span>
+                                <span>Python</span>
+                                <span>Blockchain</span>
+
+                            </div>
+
+                            <a href="https://github.com/Shriyashthakare671/Human-Resource-Management-System.git"
+                                target="_blank" rel="noopener noreferrer" class="github-link">
+
+                                <ion-icon name="logo-github"></ion-icon>
+                                GitHub
+
+                            </a>
+
+                        </div>
+
+                        <button type="button" class="back-btn">
+                            ← Back
+                        </button>
 
                     </div>
+
                 </div>
-            </div>
+
+            </article>
 
 
-            <div class="card">
+            <!-- =================================================
+             PROJECT 05
+        ================================================== -->
+
+            <article class="card" data-category="react">
+
                 <div class="card-inner">
-                    <!-- Front side of the card -->
+
                     <div class="card-front">
+
                         <div class="circle">
                             <h2>05</h2>
                         </div>
-                        <div class="content">
-                            <p> Personal Portfolio Application - React Native.</p>
-                            <b style="color: #ee0a0a;">( Android, React-Native)</b>
-                            <a href="#" onclick="flipCard(event)">Read More</a>
+
+                        <div class="card-content">
+
+                            <span class="project-type">
+                                Full Stack Application
+                            </span>
+
+                            <h3>
+                                Society Management System
+                            </h3>
+
+                            <p>
+                                Residential society
+                                administration platform.
+                            </p>
+
+                            <div class="tech-stack">
+
+                                <span>React</span>
+                                <span>NodeJS</span>
+                                <span>JWT</span>
+                                <span>MySQL</span>
+
+                            </div>
+
+                            <button type="button" class="view-btn">
+                                View Details
+                            </button>
+
                         </div>
+
                     </div>
 
-                    <!-- Back side of the card -->
+
                     <div class="card-back">
-                        <h5>
-                            I have developed a personal portfolio application using React Native to showcase my skills,
-                            projects, and achievements. <br>
-                            The app highlights my expertise in web and mobile app development, including technologies
-                            like React, Node.js, and MySQL.
-                            <br>It provides an interactive and user-friendly interface to display my work, educational
-                            background, and
-                            professional experiences, while demonstrating my proficiency in React Native and UI design
-                            principles.
-                        </h5>
-                        <a href="https://github.com/Shriyashthakare671/Portfolio-Application..git" target="_blank"
-                            class="github-link">View on GitHub</a>
-                        <!-- Back button -->
-                        <button class="back-btn" onclick="flipCardBack(event)">Back</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="card">
+                        <div class="back-content">
+
+                            <span class="project-number">
+                                PROJECT 05
+                            </span>
+
+                            <h3>
+                                Society Management System
+                            </h3>
+
+                            <ul>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>Admin and Secretary dashboard</span>
+                                </li>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>Owner management</span>
+                                </li>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>Visitor tracking</span>
+                                </li>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>Maintenance management</span>
+                                </li>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>JWT security</span>
+                                </li>
+
+                            </ul>
+
+                            <div class="tech-stack">
+
+                                <span>React</span>
+                                <span>Node</span>
+                                <span>Express</span>
+                                <span>MySQL</span>
+
+                            </div>
+
+                            <a href="https://github.com/Shriyashthakare671/SocietyManagementSystem.git" target="_blank"
+                                rel="noopener noreferrer" class="github-link">
+
+                                <ion-icon name="logo-github"></ion-icon>
+                                GitHub
+
+                            </a>
+
+                        </div>
+
+                        <button type="button" class="back-btn">
+                            ← Back
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =================================================
+             PROJECT 06
+        ================================================== -->
+
+            <article class="card" data-category="mobile">
+
                 <div class="card-inner">
-                    <!-- Front side of the card -->
+
                     <div class="card-front">
+
                         <div class="circle">
                             <h2>06</h2>
                         </div>
-                        <div class="content">
-                            <p> Weather Updates Website.</p>
-                            <b style="color: #ee0a0a;">( HTML, CSS, JavaScript)</b>
-                            <a href="#" onclick="flipCard(event)">Read More</a>
+
+                        <div class="card-content">
+
+                            <span class="project-type">
+                                Mobile Application
+                            </span>
+
+                            <h3>
+                                Portfolio Mobile App
+                            </h3>
+
+                            <p>
+                                Personal portfolio
+                                mobile application.
+                            </p>
+
+                            <div class="tech-stack">
+
+                                <span>React Native</span>
+                                <span>Expo</span>
+                                <span>Android</span>
+
+                            </div>
+
+                            <button type="button" class="view-btn">
+                                View Details
+                            </button>
+
                         </div>
+
                     </div>
 
-                    <!-- Back side of the card -->
+
                     <div class="card-back">
-                        <h5>
-                            I have developed a weather website using HTML, CSS, and JavaScript that provides real-time
-                            weather updates.
-                            <br>
-                            The website integrates with a weather API to fetch the latest data,
-                            including temperature, humidity, wind speed, and forecasts for multiple locations. The
-                            design is responsive, ensuring it works seamlessly across various devices.
-                            <br>The app also
-                            features an interactive interface with user-friendly navigation, allowing users to easily
-                            search for weather conditions by city. This project demonstrates my skills in web
-                            development, API integration, and front-end design.
-                        </h5>
-                        <a href="https://github.com/Shriyashthakare671/Weather_Website.git" target="_blank"
-                            class="github-link">View on GitHub</a>
-                        <!-- Back button -->
-                        <button class="back-btn" onclick="flipCardBack(event)">Back</button>
+
+                        <div class="back-content">
+
+                            <span class="project-number">
+                                PROJECT 06
+                            </span>
+
+                            <h3>
+                                Portfolio Mobile App
+                            </h3>
+
+                            <ul>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>Mobile portfolio showcase</span>
+                                </li>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>Project gallery</span>
+                                </li>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>Skills and achievements</span>
+                                </li>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>Responsive mobile UI</span>
+                                </li>
+
+                            </ul>
+
+                            <div class="tech-stack">
+
+                                <span>React Native</span>
+                                <span>Expo</span>
+
+                            </div>
+
+                            <a href="https://github.com/Shriyashthakare671/Portfolio-Application..git" target="_blank"
+                                rel="noopener noreferrer" class="github-link">
+
+                                <ion-icon name="logo-github"></ion-icon>
+                                GitHub
+
+                            </a>
+
+                        </div>
+
+                        <button type="button" class="back-btn">
+                            ← Back
+                        </button>
+
                     </div>
+
                 </div>
+
+            </article>
+
+
+            <!-- =================================================
+             PROJECT 07
+        ================================================== -->
+
+            <article class="card" data-category="react">
+
+                <div class="card-inner">
+
+                    <div class="card-front">
+
+                        <div class="circle">
+                            <h2>07</h2>
+                        </div>
+
+                        <div class="card-content">
+
+                            <span class="project-type">
+                                Web Application
+                            </span>
+
+                            <h3>
+                                Weather Updates Website
+                            </h3>
+
+                            <p>
+                                Real-time weather
+                                forecasting application.
+                            </p>
+
+                            <div class="tech-stack">
+
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>API</span>
+
+                            </div>
+
+                            <button type="button" class="view-btn">
+                                View Details
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="card-back">
+
+                        <div class="back-content">
+
+                            <span class="project-number">
+                                PROJECT 07
+                            </span>
+
+                            <h3>
+                                Weather Updates Website
+                            </h3>
+
+                            <ul>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>Real-time weather data</span>
+                                </li>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>Weather API integration</span>
+                                </li>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>City-based search</span>
+                                </li>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>Responsive design</span>
+                                </li>
+
+                                <li>
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                    <span>Forecast tracking</span>
+                                </li>
+
+                            </ul>
+
+                            <div class="tech-stack">
+
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+
+                            </div>
+
+                            <a href="https://github.com/Shriyashthakare671/Weather_Website.git" target="_blank"
+                                rel="noopener noreferrer" class="github-link">
+
+                                <ion-icon name="logo-github"></ion-icon>
+                                GitHub
+
+                            </a>
+
+                        </div>
+
+                        <button type="button" class="back-btn">
+                            ← Back
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+     CERTIFICATIONS
+===================================================== -->
+
+    <section id="certifications">
+
+        <div class="section-heading">
+
+            <span>MY ACHIEVEMENTS</span>
+
+            <h2>Certifications</h2>
+
+            <p>
+                Certifications, workshops and professional learning
+                that strengthen my technical and development skills.
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+         CERTIFICATION GRID
+    ========================== -->
+
+        <div class="certification-grid">
+
+
+            <!-- CERTIFICATE 01 -->
+
+            <article class="certification-card">
+
+                <div class="certificate-icon">
+                    <ion-icon name="phone-portrait-outline"></ion-icon>
+                </div>
+
+                <div class="certificate-content">
+
+                    <span class="certificate-number">
+                        CERTIFICATE 01
+                    </span>
+
+                    <h3>
+                        Centre for Development of Mobile Computing
+                    </h3>
+
+                    <p class="certificate-issuer">
+                        CDAC
+                    </p>
+
+                    <p class="certificate-description">
+                        Completed professional learning focused on mobile
+                        computing concepts, application development and
+                        modern mobile technologies.
+                    </p>
+
+                    <div class="certificate-footer">
+
+                        <span class="certificate-badge">
+                            CDAC
+                        </span>
+
+                        <a href="/Photos/CDAC Certificate.pdf" class="certificate-link" target="_blank"
+                            rel="noopener noreferrer">
+                            <ion-icon name="open-outline"></ion-icon>
+                            View Certificate
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CERTIFICATE 02 -->
+
+            <article class="certification-card">
+
+                <div class="certificate-icon">
+                    <ion-icon name="code-slash-outline"></ion-icon>
+                </div>
+
+                <div class="certificate-content">
+
+                    <span class="certificate-number">
+                        CERTIFICATE 02
+                    </span>
+
+                    <h3>
+                        Java Full Stack
+                    </h3>
+
+                    <p class="certificate-issuer">
+                        Campus To Technical Careers Training Program —
+                        TNS India Foundation
+                    </p>
+
+                    <p class="certificate-description">
+                        Completed full-stack Java development training
+                        covering Java programming, web technologies,
+                        databases, backend development and application
+                        development concepts.
+                    </p>
+
+                    <div class="certificate-footer">
+
+                        <span class="certificate-badge">
+                            JAVA
+                        </span>
+
+                        <a href="/Photos/TC05040161 CERTIFICATE TNS .pdf" class="certificate-link" target="_blank"
+                            rel="noopener noreferrer">
+                            <ion-icon name="open-outline"></ion-icon>
+                            View Certificate
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CERTIFICATE 03 -->
+
+            <article class="certification-card">
+
+                <div class="certificate-icon">
+                    <ion-icon name="analytics-outline"></ion-icon>
+                </div>
+
+                <div class="certificate-content">
+
+                    <span class="certificate-number">
+                        CERTIFICATE 03
+                    </span>
+
+                    <h3>
+                        Google Data Analytics
+                    </h3>
+
+                    <p class="certificate-issuer">
+                        Issued by Google
+                    </p>
+
+                    <p class="certificate-description">
+                        Professional learning focused on data analytics,
+                        data preparation, analysis, visualization and
+                        extracting meaningful insights from data.
+                    </p>
+
+                    <div class="certificate-footer">
+
+                        <span class="certificate-badge">
+                            GOOGLE
+                        </span>
+
+                        <a href="/Photos/DATA ANALYTICS CERTIFICATE.pdf" class="certificate-link" target="_blank"
+                            rel="noopener noreferrer">
+                            <ion-icon name="open-outline"></ion-icon>
+                            View Certificate
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CERTIFICATE 04 -->
+
+            <article class="certification-card">
+
+                <div class="certificate-icon">
+                    <ion-icon name="cloud-outline"></ion-icon>
+                </div>
+
+                <div class="certificate-content">
+
+                    <span class="certificate-number">
+                        CERTIFICATE 04
+                    </span>
+
+                    <h3>
+                        Develop Serverless Apps With Firebase
+                    </h3>
+
+                    <p class="certificate-issuer">
+                        Google Cloud
+                    </p>
+
+                    <p class="certificate-description">
+                        Learned serverless application development using
+                        Firebase services, cloud-based application
+                        architecture and backend integration concepts.
+                    </p>
+
+                    <div class="certificate-footer">
+
+                        <span class="certificate-badge">
+                            GOOGLE CLOUD
+                        </span>
+
+                        <a href="/Photos/Develop Serverless Apps with Firebase.png" class="certificate-link"
+                            target="_blank" rel="noopener noreferrer">
+                            <ion-icon name="open-outline"></ion-icon>
+                            View Certificate
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CERTIFICATE 05 -->
+
+            <article class="certification-card">
+
+                <div class="certificate-icon">
+                    <ion-icon name="people-outline"></ion-icon>
+                </div>
+
+                <div class="certificate-content">
+
+                    <span class="certificate-number">
+                        CERTIFICATE 05
+                    </span>
+
+                    <h3>
+                        Cloud Computing Workshop
+                    </h3>
+
+                    <p class="certificate-issuer">
+                        Industry Academia Community
+                    </p>
+
+                    <p class="certificate-description">
+                        Participated in a cloud computing workshop covering
+                        fundamental cloud concepts, services, deployment
+                        models and industry-oriented cloud technologies.
+                    </p>
+
+                    <div class="certificate-footer">
+
+                        <span class="certificate-badge">
+                            WORKSHOP
+                        </span>
+
+                        <a href="/Photos/1726563494886-certificate.png" class="certificate-link" target="_blank"
+                            rel="noopener noreferrer">
+                            <ion-icon name="open-outline"></ion-icon>
+                            View Certificate
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CERTIFICATE 06 -->
+
+            <article class="certification-card">
+
+                <div class="certificate-icon">
+                    <ion-icon name="globe-outline"></ion-icon>
+                </div>
+
+                <div class="certificate-content">
+
+                    <span class="certificate-number">
+                        CERTIFICATE 06
+                    </span>
+
+                    <h3>
+                        Web Development Internship
+                    </h3>
+
+                    <p class="certificate-issuer">
+                        Paarsh InfoTech
+                    </p>
+
+                    <p class="certificate-description">
+                        Completed a web development internship involving
+                        practical development experience, frontend
+                        technologies, responsive interfaces and real-world
+                        web application development.
+                    </p>
+
+                    <div class="certificate-footer">
+
+                        <span class="certificate-badge">
+                            INTERNSHIP
+                        </span>
+
+                        <a href="/Photos/SHRIYASH THAKRE web development certificate.pdf" class="certificate-link"
+                            target="_blank" rel="noopener noreferrer">
+                            <ion-icon name="open-outline"></ion-icon>
+                            View Certificate
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+    <!-- =====================================================
+     AWS ETL ARCHITECTURE
+===================================================== -->
+
+    <section class="etl-learning-section">
+
+        <div class="etl-learning-header">
+
+            <span class="etl-learning-badge">
+                <ion-icon name="cloud-outline"></ion-icon>
+                CURRENTLY LEARNING
+            </span>
+
+            <h2>AWS ETL Architecture</h2>
+
+            <p>
+                My current learning roadmap for Cloud Data Engineering,
+                ETL pipelines, data warehousing and analytics.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+         ETL FLOW
+    ================================================== -->
+
+        <div class="etl-flow">
+
+
+            <!-- SOURCE DATA -->
+
+            <div class="etl-step source-step">
+
+                <div class="etl-icon">
+                    <ion-icon name="server-outline"></ion-icon>
+                </div>
+
+                <span class="etl-label">
+                    SOURCE DATA
+                </span>
+
+                <div class="etl-items">
+                    <span>MySQL</span>
+                    <span>RDBMS</span>
+                    <span>NoSQL</span>
+                    <span>Text Logs</span>
+                </div>
+
+            </div>
+
+
+            <div class="etl-arrow">
+                <span>→</span>
+            </div>
+
+
+            <!-- EXTRACT -->
+
+            <div class="etl-step">
+
+                <div class="etl-icon">
+                    <ion-icon name="download-outline"></ion-icon>
+                </div>
+
+                <span class="etl-label">
+                    EXTRACT
+                </span>
+
+                <p>
+                    Extract data from
+                    structured and
+                    unstructured sources.
+                </p>
+
+            </div>
+
+
+            <div class="etl-arrow">
+                <span>→</span>
+            </div>
+
+
+            <!-- DATA LAKE -->
+
+            <div class="etl-step">
+
+                <div class="etl-icon">
+                    <ion-icon name="layers-outline"></ion-icon>
+                </div>
+
+                <span class="etl-label">
+                    DATA LAKE
+                </span>
+
+                <div class="etl-items">
+                    <span>Amazon S3</span>
+                    <span>HDFS</span>
+                    <span>Google Storage</span>
+                </div>
+
+            </div>
+
+
+            <div class="etl-arrow">
+                <span>→</span>
+            </div>
+
+
+            <!-- AWS S3 -->
+
+            <div class="etl-step highlight-step">
+
+                <div class="etl-icon">
+                    <ion-icon name="cloud-outline"></ion-icon>
+                </div>
+
+                <span class="etl-label">
+                    AMAZON S3
+                </span>
+
+                <p>
+                    Scalable object storage
+                    for raw and processed data.
+                </p>
+
+            </div>
+
+
+            <div class="etl-arrow">
+                <span>→</span>
+            </div>
+
+
+            <!-- AWS GLUE -->
+
+            <div class="etl-step highlight-step">
+
+                <div class="etl-icon">
+                    <ion-icon name="git-branch-outline"></ion-icon>
+                </div>
+
+                <span class="etl-label">
+                    AWS GLUE
+                </span>
+
+                <div class="etl-items">
+                    <span>Crawler</span>
+                    <span>Data Catalog</span>
+                    <span>ETL Jobs</span>
+                </div>
+
+            </div>
+
+
+            <div class="etl-arrow">
+                <span>→</span>
+            </div>
+
+
+            <!-- TRANSFORM -->
+
+            <div class="etl-step transform-step">
+
+                <div class="etl-icon">
+                    <ion-icon name="funnel-outline"></ion-icon>
+                </div>
+
+                <span class="etl-label">
+                    TRANSFORM
+                </span>
+
+                <div class="etl-items">
+                    <span>Clean</span>
+                    <span>Validate</span>
+                    <span>Normalize</span>
+                    <span>Join</span>
+                </div>
+
+            </div>
+
+
+            <div class="etl-arrow">
+                <span>→</span>
+            </div>
+
+
+            <!-- PYSPARK -->
+
+            <div class="etl-step">
+
+                <div class="etl-icon">
+                    <ion-icon name="code-slash-outline"></ion-icon>
+                </div>
+
+                <span class="etl-label">
+                    PYSPARK
+                </span>
+
+                <p>
+                    Distributed data
+                    transformation and processing.
+                </p>
+
+            </div>
+
+
+            <div class="etl-arrow">
+                <span>→</span>
+            </div>
+
+
+            <!-- DATABRICKS -->
+
+            <div class="etl-step">
+
+                <div class="etl-icon">
+                    <ion-icon name="analytics-outline"></ion-icon>
+                </div>
+
+                <span class="etl-label">
+                    DATABRICKS
+                </span>
+
+                <p>
+                    Big data processing,
+                    Spark and data engineering.
+                </p>
+
+            </div>
+
+
+            <div class="etl-arrow">
+                <span>→</span>
+            </div>
+
+
+            <!-- GLUE -->
+
+            <div class="etl-step">
+
+                <div class="etl-icon">
+                    <ion-icon name="sync-outline"></ion-icon>
+                </div>
+
+                <span class="etl-label">
+                    GLUE
+                </span>
+
+                <p>
+                    Automated ETL workflows
+                    and pipeline processing.
+                </p>
+
+            </div>
+
+
+            <div class="etl-arrow">
+                <span>→</span>
+            </div>
+
+
+            <!-- LOAD -->
+
+            <div class="etl-step">
+
+                <div class="etl-icon">
+                    <ion-icon name="cloud-upload-outline"></ion-icon>
+                </div>
+
+                <span class="etl-label">
+                    LOAD
+                </span>
+
+                <p>
+                    Load transformed data
+                    into analytical storage.
+                </p>
+
+            </div>
+
+
+            <div class="etl-arrow">
+                <span>→</span>
+            </div>
+
+
+            <!-- DATA WAREHOUSE -->
+
+            <div class="etl-step warehouse-step">
+
+                <div class="etl-icon">
+                    <ion-icon name="cube-outline"></ion-icon>
+                </div>
+
+                <span class="etl-label">
+                    DATA WAREHOUSE
+                </span>
+
+                <div class="warehouse-options">
+
+                    <span>Amazon Redshift</span>
+
+                    <span>Snowflake</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="etl-arrow">
+                <span>→</span>
+            </div>
+
+
+            <!-- ANALYTICS -->
+
+            <div class="etl-step analytics-step">
+
+                <div class="etl-icon">
+                    <ion-icon name="bar-chart-outline"></ion-icon>
+                </div>
+
+                <span class="etl-label">
+                    ANALYTICS
+                </span>
+
+                <div class="etl-items">
+                    <span>Power BI</span>
+                    <span>SQL</span>
+                    <span>Reports</span>
+                </div>
+
             </div>
 
         </div>
+
+
+        <!-- =================================================
+         CURRENTLY LEARNING
+    ================================================== -->
+
+        <div class="etl-learning-topics">
+
+            <span>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                AWS S3
+            </span>
+
+            <span>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                AWS Glue
+            </span>
+
+            <span>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                PySpark
+            </span>
+
+            <span>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                ETL Pipelines
+            </span>
+
+            <span>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                Data Warehousing
+            </span>
+
+            <span>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                SQL Analytics
+            </span>
+
+            <span>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                Data Quality
+            </span>
+
+            <span>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                Incremental Loading
+            </span>
+
+        </div>
+
     </section>
+
+    <!-- =========================================================
+     GITHUB ACTIVITY
+========================================================= -->
+
+    <section id="github-section">
+
+        <div class="section-heading github-heading">
+
+            <span class="section-label">
+                <ion-icon name="logo-github"></ion-icon>
+                GITHUB ACTIVITY
+            </span>
+
+            <h2>Open Source & GitHub</h2>
+
+            <p>
+                Explore my projects, development work and technical
+                experiments on GitHub.
+            </p>
+
+        </div>
+
+
+        <div class="github-wrapper">
+
+            <!-- GITHUB PROFILE CARD -->
+            <div class="github-profile-card">
+
+                <div class="github-card-top">
+
+                    <div class="github-avatar">
+
+                        <ion-icon name="logo-github"></ion-icon>
+
+                    </div>
+
+                    <div class="github-profile-info">
+
+                        <span class="github-label">
+                            GITHUB PROFILE
+                        </span>
+
+                        <h3>
+                            Shriyashthakare671
+                        </h3>
+
+                        <p>
+                            Full Stack Developer • React • Java • AWS • ETL
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TECH STACK -->
+
+                <div class="github-tech-stack">
+
+                    <span>
+                        <ion-icon name="logo-react"></ion-icon>
+                        React
+                    </span>
+
+                    <span>
+                        <ion-icon name="phone-portrait-outline"></ion-icon>
+                        React Native
+                    </span>
+
+                    <span>
+                        <ion-icon name="code-slash-outline"></ion-icon>
+                        JavaScript
+                    </span>
+
+                    <span>
+                        <ion-icon name="cloud-outline"></ion-icon>
+                        AWS
+                    </span>
+
+                    <span>
+                        <ion-icon name="server-outline"></ion-icon>
+                        ETL
+                    </span>
+
+                </div>
+
+
+                <!-- GITHUB DESCRIPTION -->
+
+                <div class="github-description">
+
+                    <ion-icon name="git-branch-outline"></ion-icon>
+
+                    <p>
+                        Building practical web applications, mobile
+                        applications and cloud-based data solutions.
+                    </p>
+
+                </div>
+
+
+                <!-- BUTTONS -->
+
+                <div class="github-actions">
+
+                    <a href="https://github.com/Shriyashthakare671" target="_blank" rel="noopener noreferrer"
+                        class="github-primary-btn">
+
+                        <ion-icon name="logo-github"></ion-icon>
+
+                        Visit GitHub
+
+                        <ion-icon name="arrow-up-outline" class="external-icon">
+                        </ion-icon>
+
+                    </a>
+
+
+                    <a href="https://github.com/Shriyashthakare671?tab=repositories" target="_blank"
+                        rel="noopener noreferrer" class="github-secondary-btn">
+
+                        <ion-icon name="folder-open-outline"></ion-icon>
+
+                        View Repositories
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- GITHUB HIGHLIGHTS -->
+
+            <div class="github-highlights">
+
+                <div class="github-highlight">
+
+                    <div class="highlight-icon">
+                        <ion-icon name="code-slash-outline"></ion-icon>
+                    </div>
+
+                    <div>
+                        <strong>Development</strong>
+                        <span>Web & Mobile Applications</span>
+                    </div>
+
+                </div>
+
+
+                <div class="github-highlight">
+
+                    <div class="highlight-icon">
+                        <ion-icon name="cloud-outline"></ion-icon>
+                    </div>
+
+                    <div>
+                        <strong>Cloud</strong>
+                        <span>AWS & Data Engineering</span>
+                    </div>
+
+                </div>
+
+
+                <div class="github-highlight">
+
+                    <div class="highlight-icon">
+                        <ion-icon name="git-merge-outline"></ion-icon>
+                    </div>
+
+                    <div>
+                        <strong>Projects</strong>
+                        <span>Practical & Learning Projects</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+     CONTACT
+========================================================= -->
 
     <section id="contact">
-        <div class="contact-form">
-            <h2>Contact Me</h2>
-            <form id="contactForm" onsubmit="sendEmail(event)">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit" style="color: #0fc6d3;">Send Message</button>
-                <p class="success-message">Message sent successfully!</p>
-            </form>
-            <p id="thankYouMessage" class="thank-you-message" style="display: none;">Thank You For Visiting My Portfolio
-                Website.</p>
+
+        <div class="section-heading contact-heading">
+
+            <span class="section-label">
+                <ion-icon name="chatbubbles-outline"></ion-icon>
+                GET IN TOUCH
+            </span>
+
+            <h2>Let's Connect</h2>
+
+            <p>
+                Have a project, opportunity or technical discussion?
+                Feel free to reach out.
+            </p>
+
         </div>
 
-        <!-- Signature image at the bottom-right corner -->
-        <div class="signature-container">
-            <img src="Photos/sign.jpg" alt="Signature" class="signature-image">
+
+        <div class="contact-container">
+
+
+            <!-- =================================================
+             LEFT SIDE
+        ================================================== -->
+
+            <div class="contact-left">
+
+                <div class="contact-intro">
+
+                    <span class="contact-small-title">
+                        LET'S WORK TOGETHER
+                    </span>
+
+                    <h3>
+                        Let's build something
+                        <span>meaningful.</span>
+                    </h3>
+
+                    <p>
+                    -  From your idea to a fully functional website, let’s create a digital experience designed around your requirements.”“From your idea to a fully functional website, let’s create a digital experience designed around your requirements.  -
+                </p> 
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <a href="mailto:shriyashthakare671@gmail.com" class="contact-card">
+
+                    <div class="contact-card-icon">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </div>
+
+                    <div class="contact-card-content">
+
+                        <span>Email</span>
+
+                        <strong>
+                            shriyashthakare671@gmail.com
+                        </strong>
+
+                    </div>
+
+                    <ion-icon name="arrow-forward-outline" class="contact-arrow">
+                    </ion-icon>
+
+                </a>
+
+
+                <!-- PHONE -->
+
+                <div class="contact-card">
+
+                    <div class="contact-card-icon">
+                        <ion-icon name="call-outline"></ion-icon>
+                    </div>
+
+                    <div class="contact-card-content">
+
+                        <span>Phone</span>
+
+                        <strong>
+                            Available Upon Request
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LOCATION -->
+
+                <div class="contact-card">
+
+                    <div class="contact-card-icon">
+                        <ion-icon name="location-outline"></ion-icon>
+                    </div>
+
+                    <div class="contact-card-content">
+
+                        <span>Location</span>
+
+                        <strong>
+                            Nashik, Maharashtra, India
+                        </strong>
+
+                    </div>
+
+                </div>
+ 
+            </div>
+
+
+
+            <!-- =================================================
+             RIGHT SIDE - CONTACT FORM
+        ================================================== -->
+
+            <div class="contact-right">
+
+                <div class="contact-form-card">
+
+                    <div class="form-header">
+
+                        <div>
+
+                            <span>
+                                SEND A MESSAGE
+                            </span>
+
+                            <h3>
+                                Get in touch
+                            </h3>
+
+                        </div>
+
+                        <div class="form-icon">
+
+                            <ion-icon name="paper-plane-outline"></ion-icon>
+
+                        </div>
+
+                    </div>
+
+
+                    <form id="contactForm">
+
+
+                        <!-- NAME -->
+
+                        <div class="form-group">
+
+                            <label for="contact-name">
+                                Your Name
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <ion-icon name="person-outline"></ion-icon>
+
+                                <input type="text" name="name" placeholder="Your Name" required>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="form-group">
+
+                            <label for="contact-email">
+                                Email Address
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <ion-icon name="mail-outline"></ion-icon>
+
+                                <input type="email" name="email" placeholder="Your Email" required>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- SUBJECT -->
+
+                        <div class="form-group">
+
+                            <label for="contact-subject">
+                                Subject
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <ion-icon name="document-text-outline"></ion-icon>
+
+                                <input type="text" id="contact-subject" name="subject"
+                                    placeholder="Enter message subject" required>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- MESSAGE -->
+
+                        <div class="form-group">
+
+                            <label for="contact-message">
+                                Message
+                            </label>
+
+                            <div class="input-wrapper textarea-wrapper">
+
+                                <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+
+                                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- SEND BUTTON -->
+
+                        <button type="submit" class="send-message-btn">
+
+
+                            <span>
+                                Send Message
+                            </span>
+
+                            <ion-icon name="paper-plane-outline">
+                            </ion-icon>
+
+                        </button>
+
+
+                        <p class="form-note">
+
+                            <ion-icon name="information-circle-outline"></ion-icon>
+
+                            Your email application will open with
+                            the message automatically prepared.
+
+                        </p>
+
+                    </form>
+
+
+                    <!-- SUCCESS MESSAGE -->
+
+                    <div id="thankYouMessage" class="thank-you-message" style="display: none;">
+
+                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+
+                        <div>
+
+                            <strong>
+                                Message prepared successfully!
+                            </strong>
+
+                            <span>
+                                Your email application should open shortly.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
+
     </section>
 
 
-    <footer>
-        <p>&copy; 2025 Developed By: Mr. Shriyash Thakare. <span style="color: red;">All Rights Reserved.</span> </p>
-    </footer>
+  <!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer id="footer">
+
+    <div class="footer-container">
+
+        <!-- =========================
+             FOOTER MAIN
+        ========================== -->
+
+        <div class="footer-main">
+
+            <!-- BRAND -->
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+                    ST
+                </div>
+
+                <div class="footer-brand-info">
+
+                    <h2>Shriyash Thakare</h2>
+
+                    <p>
+                        Frontend Developer • React Native Developer<br>
+                        AWS & ETL Developer
+                    </p>
+
+                </div>
+
+            </div>
 
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            console.log("Particles.js is loading...");
+            <!-- NAVIGATION -->
 
-            particlesJS("particles-js", {
-                "particles": {
-                    "number": {
-                        "value": 78,  // ⬆ Increased number of particles
-                        "density": { "enable": true, "value_area": 600 }
-                    },
-                    "color": { "value": "#ffffff" },
-                    "shape": {
-                        "type": "circle",
-                        "stroke": { "width": 0, "color": "#000000" },
-                        "polygon": { "nb_sides": 5 }
-                    },
-                    "opacity": {
-                        "value": 0.8,  // ⬆ Increased opacity for better visibility
-                        "random": false,
-                        "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false }
-                    },
-                    "size": {
-                        "value": 5,  // ⬆ Increased size
-                        "random": true,
-                        "anim": { "enable": false, "speed": 50, "size_min": 0.1, "sync": false }
-                    },
-                    "line_linked": {
-                        "enable": true,
-                        "distance": 150,
-                        "color": "#ffffff",
-                        "opacity": 0.6,
-                        "width": 2  // ⬆ Increased line thickness
-                    },
-                    "move": {
-                        "enable": true,
-                        "speed": 6,  // ⬆ Increased speed slightly
-                        "direction": "none",
-                        "random": false,
-                        "straight": false,
-                        "out_mode": "out",
-                        "bounce": false,
-                        "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 }
-                    }
-                },
-                "interactivity": {
-                    "detect_on": "canvas",
-                    "events": {
-                        "onhover": { "enable": true, "mode": "repulse" },
-                        "onclick": { "enable": true, "mode": "push" },
-                        "resize": true
-                    },
-                    "modes": {
-                        "grab": { "distance": 400, "line_linked": { "opacity": 1 } },
-                        "bubble": { "distance": 400, "size": 6, "duration": 2, "opacity": 8, "speed": 3 },
-                        "repulse": { "distance": 200, "duration": 0.4 },
-                        "push": { "particles_nb": 5 },
-                        "remove": { "particles_nb": 2 }
-                    }
-                },
-                "retina_detect": true
-            });
+            <nav class="footer-navigation" aria-label="Footer Navigation">
 
-            console.log("Particles.js loaded successfully!");
-        });
+                <a href="#header">Home</a>
+
+                <a href="#about">About</a>
+
+                <a href="#projects">Projects</a>
+
+                <a href="#certifications">Certifications</a>
+
+                <a href="#contact">Contact</a>
+
+            </nav>
 
 
-    </script>
+            <!-- SOCIAL -->
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            particlesJS("particles-project", {
-                "particles": {
-                    "number": {
-                        "value": 100,  // Increase number of particles
-                        "density": { "enable": true, "value_area": 800 }
-                    },
-                    "color": { "value": "#ffffff" },
-                    "shape": {
-                        "type": "circle",
-                        "stroke": { "width": 0, "color": "#000000" },
-                        "polygon": { "nb_sides": 5 }
-                    },
-                    "opacity": {
-                        "value": 0.7,
-                        "random": false,
-                        "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false }
-                    },
-                    "size": {
-                        "value": 5,
-                        "random": true,
-                        "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false }
-                    },
-                    "line_linked": {
-                        "enable": true,
-                        "distance": 150,
-                        "color": "#ffffff",
-                        "opacity": 0.6,
-                        "width": 2
-                    },
-                    "move": {
-                        "enable": true,
-                        "speed": 3,
-                        "direction": "none",
-                        "random": false,
-                        "straight": false,
-                        "out_mode": "out",
-                        "bounce": false,
-                        "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 }
-                    }
-                },
-                "interactivity": {
-                    "detect_on": "canvas",
-                    "events": {
-                        "onhover": { "enable": true, "mode": "repulse" },
-                        "onclick": { "enable": true, "mode": "push" },
-                        "resize": true
-                    },
-                    "modes": {
-                        "grab": { "distance": 400, "line_linked": { "opacity": 1 } },
-                        "bubble": { "distance": 400, "size": 6, "duration": 2, "opacity": 8, "speed": 3 },
-                        "repulse": { "distance": 200, "duration": 0.4 },
-                        "push": { "particles_nb": 5 },
-                        "remove": { "particles_nb": 2 }
-                    }
-                },
-                "retina_detect": true
-            });
+            <div class="footer-social">
 
-            console.log("Particles.js for #projects loaded successfully!");
-        });
+                <a
+                    href="https://github.com/Shriyashthakare671"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                >
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
 
-    </script>
+                <a
+                    href="https://www.linkedin.com/in/mr-shriyash-thakare-05695b1b2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                >
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
 
-    <!-- For Avatar Annimation -->
-    <script>
-        setTimeout(() => {
-            const welcome = document.getElementById('welcome');
-            if (welcome) {
-                welcome.style.display = 'none';
-            }
-        }, 5000); 
-    </script>
+                <a
+                    href="mailto:shriyashthakare671@gmail.com"
+                    aria-label="Email"
+                >
+                    <ion-icon name="mail-outline"></ion-icon>
+                </a>
+
+            </div>
+
+        </div>
 
 
+        <!-- =========================
+             DIVIDER
+        ========================== -->
+
+        <div class="footer-divider"></div>
 
 
-    <script> // projects card scrolling 
-        const cards = document.querySelectorAll('.card');
+        <!-- =========================
+             FOOTER BOTTOM
+        ========================== -->
 
-        function handleScroll() {
-            let closestCard = null;
-            let minDistance = Number.POSITIVE_INFINITY;
+        <div class="footer-bottom">
 
-            cards.forEach(card => {
-                const rect = card.getBoundingClientRect();
-                const distance = Math.abs(rect.top - window.innerHeight / 3);
+            <p>
+                © 2026
+                <strong>Mr Shriyash Thakare</strong>
+            </p>
 
-                if (distance < minDistance) {
-                    minDistance = distance;
-                    closestCard = card;
-                }
-            });
+            <p class="footer-tech">
+                Built with
+                <span>HTML</span>
+                •
+                <span>CSS</span>
+                •
+                <span>JavaScript</span>
+                •
+                <span>React JS - Vue JS</span>
+            </p>
 
-            cards.forEach(card => card.classList.remove('active'));
-            if (closestCard) closestCard.classList.add('active');
-        }
+            <a
+                href="#header"
+                class="back-to-top"
+                aria-label="Back to top"
+            >
+                <ion-icon name="arrow-up-outline"></ion-icon>
+            </a>
 
-        window.addEventListener('scroll', handleScroll);
-        handleScroll();
-    </script>
+        </div>
 
-    <!-- ---------------------------------------------------------------------------------------------------------- -->
+    </div>
 
-
-
-    <!-- ----------------------------------------------------------------------------------------------------------- -->
-    <script>
-
-        var tabLinks = document.getElementsByClassName("tab-links");
-        var tabContents = document.getElementsByClassName("tab-contents");
-
-        function openTab(tabName) {
-            for (var tabLink of tabLinks) {
-                tabLink.classList.remove("active-link");
-            }
-            for (var tabContent of tabContents) {
-                tabContent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabName).classList.add("active-tab");
-        }
-    </script>
+</footer>
 
 
+    <!-- ============================= -->
+    <!-- JAVASCRIPT LIBRARIES -->
+    <!-- ============================= -->
 
-
-    <!-- for scrolling smoothly -->
+    <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
 
-        gsap.to("body", {
-            scrollTrigger: {
-                trigger: "body",
-                start: "top top",
-                end: "bottom bottom",
-                scrub: 1, // Smooth scrolling effect
+
+
+    <!-- ============================= -->
+    <!-- INITIALIZATION -->
+    <!-- ============================= -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            if (
+                typeof particlesJS === "undefined"
+            ) {
+                console.warn("Particles.js not loaded.");
+                return;
             }
+
+
+            const particleContainer =
+                document.getElementById("particles-js");
+
+
+            if (!particleContainer) {
+                return;
+            }
+
+
+            particlesJS("particles-js", {
+
+                particles: {
+
+                    number: {
+                        value: 65,
+                        density: {
+                            enable: true,
+                            value_area: 900
+                        }
+                    },
+
+                    color: {
+                        value: [
+                            "#00d9ff",
+                            "#8b5cf6",
+                            "#ffffff"
+                        ]
+                    },
+
+                    shape: {
+                        type: "circle"
+                    },
+
+                    opacity: {
+                        value: 0.35,
+                        random: true
+                    },
+
+                    size: {
+                        value: 2.5,
+                        random: true
+                    },
+
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: "#8b5cf6",
+                        opacity: 0.18,
+                        width: 1
+                    },
+
+                    move: {
+                        enable: true,
+                        speed: 1.4,
+                        direction: "none",
+                        random: true,
+                        straight: false,
+                        out_mode: "out"
+                    }
+
+                },
+
+
+                interactivity: {
+
+                    detect_on: "canvas",
+
+                    events: {
+
+                        onhover: {
+                            enable: true,
+                            mode: "grab"
+                        },
+
+                        onclick: {
+                            enable: true,
+                            mode: "push"
+                        },
+
+                        resize: true
+
+                    },
+
+                    modes: {
+
+                        grab: {
+                            distance: 140,
+                            line_linked: {
+                                opacity: 0.35
+                            }
+                        },
+
+                        push: {
+                            particles_nb: 3
+                        }
+
+                    }
+
+                },
+
+
+                retina_detect: true
+
+            });
+
+            /* =====================================
+                GSAP
+            ===================================== */
+
+            if (typeof gsap !== "undefined") {
+
+                gsap.registerPlugin(ScrollTrigger);
+
+
+                /* HERO ANIMATION */
+
+                gsap.from(".hero-left", {
+
+                    opacity: 0,
+                    x: -80,
+                    duration: 1.2,
+                    ease: "power3.out"
+
+                });
+
+
+                gsap.from(".hero-right", {
+
+                    opacity: 0,
+                    x: 80,
+                    duration: 1.2,
+                    delay: 0.2,
+                    ease: "power3.out"
+
+                });
+
+
+                /* SECTION ANIMATION */
+
+                gsap.utils.toArray("section:not(#header)").forEach(section => {
+
+                    gsap.from(section.querySelectorAll(
+                        "h1, h2, h3, .card, .skill-card, .certification-card"
+                    ), {
+
+                        scrollTrigger: {
+
+                            trigger: section,
+                            start: "top 80%",
+                            toggleActions: "play none none reverse"
+
+                        },
+
+                        opacity: 0,
+                        y: 40,
+                        duration: 0.7,
+                        stagger: 0.08,
+                        ease: "power2.out"
+
+                    });
+
+                });
+
+            }
+
+
+            /* =====================================
+               LAZY LOAD IMAGES
+            ===================================== */
+
+            const lazyImages =
+                document.querySelectorAll("img.lazyload");
+
+            if ("IntersectionObserver" in window) {
+
+                const imageObserver =
+                    new IntersectionObserver((entries, observer) => {
+
+                        entries.forEach(entry => {
+
+                            if (entry.isIntersecting) {
+
+                                const image = entry.target;
+
+                                image.src =
+                                    image.dataset.src;
+
+                                image.classList.remove(
+                                    "lazyload"
+                                );
+
+                                observer.unobserve(image);
+
+                            }
+
+                        });
+
+                    });
+
+
+                lazyImages.forEach(image => {
+
+                    imageObserver.observe(image);
+
+                });
+
+            }
+
+
+            /* =====================================
+               LAZY LOAD VIDEOS
+            ===================================== */
+
+            const lazyVideos =
+                document.querySelectorAll(".lazy-video");
+
+            if ("IntersectionObserver" in window) {
+
+                const videoObserver =
+                    new IntersectionObserver(entries => {
+
+                        entries.forEach(entry => {
+
+                            if (entry.isIntersecting) {
+
+                                entry.target.play().catch(() => { });
+
+                            } else {
+
+                                entry.target.pause();
+
+                            }
+
+                        });
+
+                    });
+
+
+                lazyVideos.forEach(video => {
+
+                    videoObserver.observe(video);
+
+                });
+
+            }
+
+
+            /* =====================================
+               PROJECT CARD ACTIVE EFFECT
+            ===================================== */
+
+            const cards =
+                document.querySelectorAll(".card");
+
+
+            function updateProjectCards() {
+
+                let closestCard = null;
+
+                let minDistance =
+                    Number.POSITIVE_INFINITY;
+
+
+                cards.forEach(card => {
+
+                    const rect =
+                        card.getBoundingClientRect();
+
+                    const distance =
+                        Math.abs(
+                            rect.top -
+                            window.innerHeight / 3
+                        );
+
+
+                    if (distance < minDistance) {
+
+                        minDistance = distance;
+
+                        closestCard = card;
+
+                    }
+
+                });
+
+
+                cards.forEach(card => {
+
+                    card.classList.remove("active");
+
+                });
+
+
+                if (closestCard) {
+
+                    closestCard.classList.add("active");
+
+                }
+
+            }
+
+
+            if (cards.length > 0) {
+
+                window.addEventListener(
+                    "scroll",
+                    updateProjectCards,
+                    { passive: true }
+                );
+
+                updateProjectCards();
+
+            }
+
+
         });
+
+
+        /* =====================================
+           HIDE OLD WELCOME SCREEN
+        ===================================== */
+
+        setTimeout(() => {
+
+            const welcome =
+                document.getElementById("welcome");
+
+            if (welcome) {
+
+                welcome.style.display = "none";
+
+            }
+
+        }, 5000);
+
     </script>
 
 
-
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
-    <!-- Include Particles.js -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-    <!-- Ionicons (Ensure this is added in your head) -->
-    <!-- Ionicons CDN for Icons -->
-    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-    <!-- Font Awesome Example -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-    <script src="./script.js"></script>
 </body>
 
 </html>
+
+
+
+<!-- ============================= -->
+<!-- PORTFOLIO JAVASCRIPT -->
+<!-- ============================= -->
+
+<script src="./script.js"></script>
